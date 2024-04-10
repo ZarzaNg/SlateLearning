@@ -18,7 +18,13 @@ INT32_MAIN_INT32_ARGC_TCHAR_ARGV()
 	FSlateApplication::InitializeAsStandaloneApplication(GetStandardStandaloneRenderer());
 	FSlateApplication::InitHighDPI(true);
 
-	const TSharedPtr<SWindow> MainWindow = SNew(SWindow).ClientSize(FVector2D(800, 600));
+	const TSharedPtr<SWindow> MainWindow = SNew(SWindow).ClientSize(FVector2D(800, 600))
+	[
+		SNew(SHorizontalBox) + SHorizontalBox::Slot()
+		[
+			SNew(SButton).Text(NSLOCTEXT("L10N", "Key", "Button Content"))
+		]
+	];
 
 	FSlateApplication::Get().AddWindow(MainWindow.ToSharedRef());
 
