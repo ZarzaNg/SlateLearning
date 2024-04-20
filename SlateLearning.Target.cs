@@ -4,14 +4,14 @@ using UnrealBuildTool;
 using System.Collections.Generic;
 
 [SupportedPlatforms(UnrealPlatformClass.All)]
-public class LearnSlateTarget : TargetRules
+public class SlateLearningTarget : TargetRules
 {
-	public LearnSlateTarget(TargetInfo Target) : base(Target)
+	public SlateLearningTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Program;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		LinkType = TargetLinkType.Monolithic;
-		LaunchModuleName = "LearnSlate";
+		LaunchModuleName = "SlateLearning";
 
 		// Lean and mean
 		bBuildDeveloperTools = false;

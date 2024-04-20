@@ -1,15 +1,15 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "LearnSlate.h"
+#include "SlateLearning.h"
 #include "Developer/StandaloneRenderer/Public/StandaloneRenderer.h"
 #include "Runtime/Slate/Public/Framework/Application/SlateApplication.h"
 #include "Runtime/SlateCore/Public/Widgets/DeclarativeSyntaxSupport.h"
 #include "Runtime/SlateCore/Public/Widgets/SWindow.h"
 #include "RequiredProgramMainCPPInclude.h"
 
-DEFINE_LOG_CATEGORY_STATIC(LogLearnSlate, Log, All);
+DEFINE_LOG_CATEGORY_STATIC(LogSlateLearning, Log, All);
 
-IMPLEMENT_APPLICATION(LearnSlate, "LearnSlate");
+IMPLEMENT_APPLICATION(SlateLearning, "SlateLearning");
 
 INT32_MAIN_INT32_ARGC_TCHAR_ARGV()
 {
@@ -20,7 +20,7 @@ INT32_MAIN_INT32_ARGC_TCHAR_ARGV()
 
 	const TSharedPtr<SWindow> MainWindow = SNew(SWindow).ClientSize(FVector2D(800, 600))
 	[
-		SNew(SHorizontalBox) + SHorizontalBox::Slot()
+		SNew(SHorizontalBox) + SHorizontalBox::Slot().VAlign(EVerticalAlignment::VAlign_Top).HAlign(EHorizontalAlignment::HAlign_Left)
 		[
 			SNew(SButton).Text(NSLOCTEXT("L10N", "Key", "Button Content"))
 		]

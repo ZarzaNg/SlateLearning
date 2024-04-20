@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class LearnSlate : ModuleRules
+public class SlateLearning : ModuleRules
 {
-	public LearnSlate(ReadOnlyTargetRules Target) : base(Target)
+	public SlateLearning(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PublicIncludePaths.Add("Runtime/Launch/Public");
 		
